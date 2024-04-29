@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "app.data.filename",
+      "type": "java.lang.String",
+      "description": "File name for raw data file"
+    },
+    {
+      "name": "app.data.path",
+      "type": "java.lang.String",
+      "description": "Path to raw data for bus records"
+    },
+    {
+      "name": "app.geojson.schema.path",
+      "type": "java.lang.String",
+      "description": "Schema used to validate generated GeoJson"
+    }
+  ]
+}
