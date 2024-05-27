@@ -47,7 +47,14 @@ Every row will be aggregated into corresponding bus trips.
 ### Application Initialisation
 Upon initialization, the application follows a multi-step process to become ready to serve data. The data is cleaned and ingested, before being aggregated into their respective bus trips.
 
-![app_initialise_seq_diagram](https://github.com/jerryk1997/nyc_bus_app_backend/assets/54168384/61660b9b-ab81-4965-ba74-36e3c8e691c0)
+<br/>
+<br/>
+<figure>
+	<img src="https://github.com/jerryk1997/nyc_bus_app_backend/assets/54168384/61660b9b-ab81-4965-ba74-36e3c8e691c0" alt="app_initialise_seq_diagram" width="100%"><br/>
+	<figcaption>Application initialisation sequence diagram</figcaption>
+</figure>
+<br/>
+<br/>
 
 **Data Cleaning and Ingestion**
 The application cleans the dataset by removing [problematic values](#problematic-values) and saving a cleaned CSV file. 
@@ -139,7 +146,14 @@ Serving of the list of vehicle references and published line names is trivial, s
 
 When the client calls either of the GeoJSON endpoints, the GeoJSON data is created on the fly. All the bus trip data is fetched and passed to the `GeoJsonBuilder` service to construct the GeoJSON object, which is then validated before being served to the client.
 
-![api_call](https://github.com/jerryk1997/nyc_bus_app_backend/assets/54168384/8c46905c-55de-4399-9e39-e2b7845e4726)
+<br/>
+<br/>
+<figure>
+	<img src="https://github.com/jerryk1997/nyc_bus_app_backend/assets/54168384/8c46905c-55de-4399-9e39-e2b7845e4726" alt="api_call_seq_diagram" width="100%"><br/>
+	<figcaption>API call sequence diagram</figcaption>
+</figure>
+<br/>
+<br/>
 
 ## GeoJSON 
 Our GeoJSON object follows the [RFC 7946](https://datatracker.ietf.org/doc/html/rfc7946#section-3.2) standard. For our purposes, we only return GeoJSON objects that are **Feature Collections**, and each **Feature** is either a **LineString** or **Point**. 
@@ -209,6 +223,11 @@ The NYC Bus App Backend includes four API endpoints:
 
 Provided below is the full class diagram.
 
-![class_diagram](https://github.com/jerryk1997/nyc_bus_app_backend/assets/54168384/a11723f2-9eea-48c8-95b6-73e166222565)
-
+<br/>
+<figure>
+	<img src="https://github.com/jerryk1997/nyc_bus_app_backend/assets/54168384/a11723f2-9eea-48c8-95b6-73e166222565" alt="class_diagram" width="100%"><br/>
+	<figcaption>Application class diagram</figcaption>
+</figure>
+<br/>
+<br/>
 
